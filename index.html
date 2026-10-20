@@ -39,6 +39,37 @@
       <button class="seg" type="button" data-n="0" aria-pressed="false" id="segAll"></button>
     </div>
 
+    <div class="rule"></div>
+
+    <!-- 音声設定 -->
+    <p class="eyebrow" id="audioEyebrow"></p>
+
+    <div class="field-label"><b id="genderLabel"></b><small id="genderNote"></small></div>
+    <div class="segs" id="genders">
+      <button class="seg" type="button" data-gender="auto" aria-pressed="true" id="segAuto"></button>
+      <button class="seg" type="button" data-gender="female" aria-pressed="false" id="segFemale"></button>
+      <button class="seg" type="button" data-gender="male" aria-pressed="false" id="segMale"></button>
+    </div>
+
+    <div class="spacer-sm"></div>
+    <div class="field-label"><b id="voiceLabel"></b><small id="voiceCount"></small></div>
+    <select id="voiceSelect" class="select"></select>
+
+    <div class="spacer-sm"></div>
+    <div class="field-label"><b id="modeLabel"></b><small id="modeNote"></small></div>
+    <div class="segs" id="modes">
+      <button class="seg" type="button" data-mode="seq" aria-pressed="true" id="segSeq"></button>
+      <button class="seg" type="button" data-mode="one" aria-pressed="false" id="segOne"></button>
+    </div>
+
+    <label class="check" id="autoWrap">
+      <input type="checkbox" id="autoPlay" checked>
+      <span id="autoLabel"></span>
+    </label>
+
+    <button class="ghost-test" type="button" id="testVoice"></button>
+    <p class="tswarn hidden" id="tswarn"></p>
+
     <button class="start" type="button" id="start"></button>
 
     <div class="statline">
@@ -62,7 +93,14 @@
       <div class="hint" id="hint"></div>
     </div>
 
+    <button class="listenall" type="button" id="listenall">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zm-2.5-7.5v2.1a6.8 6.8 0 0 1 0 10.8v2.1a8.9 8.9 0 0 0 0-15z"/></svg>
+      <span id="listenAllLabel"></span>
+    </button>
+
     <div class="opts" id="opts"></div>
+
+    <button class="confirm" type="button" id="confirm" disabled></button>
 
     <div class="feedback hidden" id="feedback">
       <div class="verdict" id="verdict"></div>
@@ -78,7 +116,7 @@
           <span id="slowLabel"></span>
         </button>
       </div>
-      <p class="tswarn hidden" id="tswarn"></p>
+      <p class="tswarn hidden" id="tswarn2"></p>
       <button class="next" type="button" id="next"></button>
     </div>
   </section>
